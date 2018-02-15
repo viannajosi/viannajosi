@@ -8,7 +8,8 @@ import javax.persistence.CollectionTable;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
- 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Transient;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class Aluno extends Pessoa  {
 	@Column(nullable = false, unique = true)	
 	private String email;
 	
+	
+	@Enumerated(EnumType.STRING)
 	private SituacaoAluno Situacao;
 	
 	/**
